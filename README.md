@@ -1,7 +1,7 @@
 # 💻 Data Science Progress Repository
 _Be one percent better everyday._
 
-Hi! I'm Dleamnor Euraze Cawaling. I started this repository on Feb 8, 2024, with the goal of documenting my journey in becoming an effective and competent Data Scientist, dedicated to leveraging my skills and knowledge for meaningful contributions to the field. This repository contains a collection of projects, notebooks, and scripts that reflect my dedication to continuous learning and improvement in the field of data science.
+Hi! I'm Dleamnor Euraze Cawaling. I started this repository on Feb 8, 2024, with the goal of documenting my journey in becoming an effective and competent Data Scientist, dedicated to leveraging my skills and knowledge for meaningful contributions to this field. This repository contains a collection of projects, notebooks, and scripts that reflect my dedication to continuous learning and improvement in the field of data science.
 
 I have created a roadmap outlining what I should learn as I dive into the field of Data Science, and I will continuously upload projects/notebooks related to these topics. My goal is to learn while sharing what I learn to fellow data enthusiast 🤝
 
