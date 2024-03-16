@@ -27,7 +27,7 @@ This section contains text analysis projects demonstrating techniques such as se
 
 This section involves projects with deep learning models for tasks like image classification, object detection, or sequence prediction. It includes the implementation of neural networks using frameworks like TensorFlow or PyTorch.
 
-**📊 Data Visualization:** (Progressing)
+**📊 Data Visualization:** (In Progress)
 
 This section includes interactive visualizations showcasing data trends, patterns, and correlations created using Microsoft Excel, PowerBi, or Tableau.
 
