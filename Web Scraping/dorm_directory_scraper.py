@@ -26,10 +26,10 @@ from scrapy.crawler import CrawlerProcess
 # Create the Spider class
 class DormitorySpider(scrapy.Spider):
     name = 'DormitorySpider'
+    
     # start_requests method
     def start_requests( self ):
-        yield scrapy.Request(url ="https://maniladormitory.com/emerald-residences-sampaloc-dormitory-near-feu/"
-    , callback=self.parse)
+        yield scrapy.Request(url ="https://maniladormitory.com/emerald-residences-sampaloc-dormitory-near-feu/", callback=self.parse)
         
     def parse(self, response):
         # Extracting data
@@ -58,16 +58,23 @@ class DormitorySpider(scrapy.Spider):
             value = row.xpath('.//td[2]//text()').extract_first()
             table_data[key] = value
 
-        print(table_data)
+        # print(table_data)
 
         return table_data
-    
+        
+    def save_to_csv(self, df: pd.DataFrame, filename: str):
+        df.to_csv(filename + ".csv")
+
     # Method to be called when spider is closed
     def closed(self, reason):
         # Create DataFrame from the collected data
         df = pd.DataFrame(self.data)
-        # Print DataFrame
-        print(df)
+        
+        # Convert DataFrame to CSV
+        df.to_csv('dormitory_data.csv', index=False)
+        
+        # Print message
+        print("DataFrame has been successfully converted to CSV.")
 
 
 if __name__ == '__main__':
