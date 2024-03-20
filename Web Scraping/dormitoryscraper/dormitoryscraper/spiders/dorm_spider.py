@@ -1,4 +1,5 @@
 import scrapy
+import re
 from ..items import DormitoryscraperItem
 
 
@@ -39,20 +40,38 @@ class DormSpiderSpider(scrapy.Spider):
         location = response.xpath('//div[contains(@class,"entry-taxonomies")]/span/a/text()').extract_first()
         dorm_details = self.extract_table_data(response.xpath('.//table'))
         # dorm_details = response.css('.grippy-host , td::text').extract()
+        address = response.xpath('//address/text()').extract_first()
 
-        
-
-        # address = response.xpath('//address/text()').extract_first()
         # phone_number = response.xpath('//div/a/text()').extract()
         # email = response.xpath('//div/a/text()').extract()
+
+
+        # Extract email addresses and phone numbers using XPath
+        emails = response.xpath('//a[contains(@href, "mailto:")]/text()').extract()
+        phone_numbers = response.xpath('//a[contains(@href, "tel:")]/text()').extract()
+
+        # Extract email addresses and phone numbers using regular expressions
+        if not emails:
+            email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+            emails = re.findall(email_regex, response.text)
+        
+        if not phone_numbers:
+            phone_regex = r'\b(?:\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b'
+            phone_numbers = re.findall(phone_regex, response.text)
+
+        # Process the extracted data (e.g., store it in items)
+        # Here I'm just printing them, but you can do anything you want with the data
+        # print("Emails:", emails)
+        # print("Phone Numbers:", phone_numbers)
+
         # print(dorm_details)
         items['dorm_name'] = dorm_name
         items['location'] = location
         items['dorm_details'] = dorm_details
 
-        # items['address'] = address
-        # items['phone_number'] = phone_number[1]
-        # items['email'] = email[2]
+        items['address'] = address
+        items['phone_number'] = phone_numbers
+        items['email'] = emails
 
         yield items  
 
