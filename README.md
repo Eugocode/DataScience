@@ -27,9 +27,12 @@ This section contains notebooks demonstrating the implementation of machine lear
 
 This section contains text analysis projects demonstrating techniques such as sentiment analysis, text classification, and topic modeling. The projects may utilize libraries such as NLTK, SpaCy, and TensorFlow.
 
+<!--
 **🤖 Deep Learning:** (To be started)
 
 This section involves projects with deep learning models for tasks like image classification, object detection, or sequence prediction. It includes the implementation of neural networks using frameworks like TensorFlow or PyTorch.
+
+-->
 
 **📊 Data Visualization:** (In Progress)
 
