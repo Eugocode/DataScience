@@ -7,7 +7,7 @@ I have created a roadmap outlining what I should learn as I dive into the field 
 
 ## 💡 What to learn?
 
-**🗃️ Web Scraping:**
+**🕸️ Web Scraping:**
 
 This section contains web scraping projects for a single and multiple pages. 
 
