@@ -7,6 +7,9 @@ I have created a roadmap outlining what I should learn as I dive into the field 
 
 ## 💡 What to learn?
 
+**🗃️ Web Scraping:**
+This section contains web scraping projects for a single and multiple pages. 
+
 **🗃️ Data Wrangling and Preprocessing:** (In Progress)
 
 This section contains scripts and notebooks implementing data cleaning, preprocessing, and feature engineering techniques. It includes handling missing values, encoding categorical variables, and scaling features for machine learning models.
